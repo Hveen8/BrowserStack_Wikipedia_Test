@@ -29,11 +29,13 @@ jobs:
       - name: 'Running application under test'
         run: ./node_modules/.bin/http-server -p 8099 &
       
-      - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
+      - name: 'Setup Java Environment'
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
           java-version: '8'
+          
+      - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
       - run: ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
