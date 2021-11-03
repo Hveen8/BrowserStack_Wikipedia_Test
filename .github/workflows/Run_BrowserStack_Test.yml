@@ -18,7 +18,7 @@ jobs:
           local-testing: start
           local-identifier: random
 
-# The next 3 steps are for building the web application to be tested and starting the web server on the runner environment
+# The next steps are for building the web application to be tested and starting the web server on the runner environment
 
       - name: 'Checkout the repository'
         uses: actions/checkout@v2
@@ -29,14 +29,21 @@ jobs:
       - name: 'Running application under test'
         run: ./node_modules/.bin/http-server -p 8099 &
       
+      - name: 'Download Oracle Java'
+        run: |
+          download_url="https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip"
+          wget -O $RUNNER_TEMP/java_package.zip $download_url
+          
       - name: 'Setup Java Environment'
         uses: actions/setup-java@v2
         with:
-          distribution: 'temurin'
+          distribution: 'jdkfile'
+          jdkFile: ${{ runner.temp }}/java_package.zip
           java-version: '8'
+          architecture: x64
           
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-      - run: ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
+        run: java -cp java ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
