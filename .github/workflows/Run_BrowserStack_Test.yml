@@ -30,7 +30,7 @@ jobs:
         run: ./node_modules/.bin/http-server -p 8099 &
       
       - name: 'Download Oracle Java'
-      - run: |
+        run: |
           download_url="https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip"
           wget -O $RUNNER_TEMP/java_package.zip $download_url
           
@@ -43,7 +43,7 @@ jobs:
           architecture: x64
           
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-      - run: ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
+        run: ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
