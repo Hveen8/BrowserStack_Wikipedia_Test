@@ -41,6 +41,7 @@ jobs:
           jdkFile: ${{ runner.temp }}/java_package.zip
           java-version: '17'
           architecture: x64
+          cache: 'gradle'
 
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
         run: java -cp java ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
