@@ -42,6 +42,12 @@ jobs:
           java-version: '8'
           architecture: x64
           
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+        
+      - name: Build with Gradle
+        run: ./gradlew build
+        
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
         run: java -cp java ./app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
 
