@@ -1,4 +1,4 @@
-package com.example.myfirstapplication;
+package com.example.browserstackwikipediatest;
 
 import java.net.URL;
 import java.util.List;
