@@ -1,5 +1,5 @@
 name: 'BrowserStack Test'
-on: [push, pull_request]
+on: [workflow_dispatch]
 jobs:
   ubuntu-job:
     name: 'BrowserStack Test on Ubuntu'
