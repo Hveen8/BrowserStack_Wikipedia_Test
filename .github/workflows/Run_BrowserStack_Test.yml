@@ -44,7 +44,7 @@ jobs:
           cache: 'gradle'
 
       - name: 'Running test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: java -cp app/libs/java-client-7.6.0-all.jar; app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
+        run: java -cp app/libs/java-client-7.6.0-all.jar app/src/test/java/com/example/myfirstapplication/WikiTest.java  # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
