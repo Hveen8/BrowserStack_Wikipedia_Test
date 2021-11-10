@@ -23,8 +23,8 @@ public class IOSTest {
         caps.setCapability("device", "iPhone 7 Plus");
         caps.setCapability("os_version", "10");
         caps.setCapability("project", "My First Project");
-        caps.setCapability("build", "Ran from IDE");
-        caps.setCapability("name", "Sample IOS Test");
+        caps.setCapability("build", "Ran from CMD");
+        caps.setCapability("name", "sample ios test");
         caps.setCapability("app", "bs://2245373184b5f86fbb5cb9c662015acd17af291a");
 
         IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub"), caps);

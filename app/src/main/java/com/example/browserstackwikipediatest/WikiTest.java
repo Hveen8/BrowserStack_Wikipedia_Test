@@ -23,8 +23,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
             caps.setCapability("device", "Samsung Galaxy S8 Plus");
             caps.setCapability("os_version", "7.0");
             caps.setCapability("project", "My First Project");
-            caps.setCapability("build", "Ran from IDE");
-            caps.setCapability("name", "sample_test");
+            caps.setCapability("build", "Ran from CMD");
+            caps.setCapability("name", "sample android test");
             caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
             caps.setCapability("browserstack.networkLogs", "true");
 
