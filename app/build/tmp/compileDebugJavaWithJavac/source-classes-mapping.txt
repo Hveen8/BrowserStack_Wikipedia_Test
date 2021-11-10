@@ -1,6 +1,0 @@
-com/example/myfirstapplication/BuildConfig.java
- com.example.myfirstapplication.BuildConfig
-com/example/browserstackwikipediatest/IOSTest.java
- com.example.browserstackwikipediatest.IOSTest
-com/example/browserstackwikipediatest/WikiTest.java
- com.example.browserstackwikipediatest.WikiTest

@@ -1,6 +1,0 @@
-com/example/myfirstapplication/WikiTest.java
- com.example.myfirstapplication.WikiTest
-com/example/browserstackwikipediatest/ExampleUnitTest.java
- com.example.browserstackwikipediatest.ExampleUnitTest
-com/example/myfirstapplication/ExampleUnitTest.java
- com.example.myfirstapplication.ExampleUnitTest
